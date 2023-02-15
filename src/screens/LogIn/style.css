@@ -1,0 +1,27 @@
+.LogIn{
+    width: 500px;
+    padding-bottom: 250px;
+    padding-top: 150px;
+    flex-direction: column;
+    display: flex;
+    margin: 5% auto;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid black;
+    text-align: center;
+    background: lightblue;
+    border-radius: 15px;
+    border: none;
+    text-transform: capitalize;
+}
+
+.sub{
+    width: 150px;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+}
+.sub:hover{
+    background: grey;
+    color: white;
+}

@@ -1,0 +1,23 @@
+.inputs{
+    height: 30px;
+    margin-bottom: 30px;
+}
+input{
+    width: 70%;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+}
+
+input::placeholder{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.error{
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 2px;
+    font-family: sans-serif;
+    text-align: center;
+}

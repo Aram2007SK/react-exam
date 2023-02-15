@@ -1,0 +1,43 @@
+.membersList{
+    margin: 70px 150px;
+}
+
+.member{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.underline{
+    width: 300px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.addMember{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-member{
+    width: 50px;
+    height: 50px;
+    border: 2px dashed rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 10px 3px;
+}
+
+.icon{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.add{
+    margin-right: 70px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
