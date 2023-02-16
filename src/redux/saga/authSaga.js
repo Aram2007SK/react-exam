@@ -1,14 +1,14 @@
 import { put, takeLatest } from "redux-saga/effects";
-import { setCurrnetUser, setError, setMembers, signIn } from "../redux/actions/logInActions";
-import { authType } from "../redux/types/types";
+import { setCurrentUser, setError} from "../actions/logInActions";
+import {setMembers} from '../actions/memberAction'
+import { authType } from "../types/types";
 
 function* authLogin() {
     let currentUser = localStorage.getItem('currentUser')
     if (currentUser) {
         currentUser = JSON.parse(currentUser)
-        console.log('asfasdfsdax',typeof currentUser);
         let membersList = localStorage.getItem('membersList')
-        yield put(setCurrnetUser(currentUser))
+        yield put(setCurrentUser(currentUser))
         yield put(setMembers(membersList))
     }
 }
@@ -20,9 +20,10 @@ function* SignIn({ payload }) {
         let currentUser = membersList.find((el) => {
             return el.login === payload.login && el.password === payload.password
         })
+        console.log('vayte',currentUser);
         if (currentUser) {
             localStorage.setItem('currentUser', JSON.stringify(currentUser))
-            yield put(setCurrnetUser(currentUser))
+            yield put(setCurrentUser(currentUser))
             yield put(setMembers(membersList))
         } else {
             yield put(setError('invalid login or password'))
@@ -32,7 +33,7 @@ function* SignIn({ payload }) {
 
 function* logOut() {
     localStorage.removeItem('currentUser')
-    yield put(setCurrnetUser(null))
+    yield put(setCurrentUser(null))
 }
 
 export function* authSaga() {
