@@ -1,7 +1,9 @@
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useCallback, useState } from "react";
-import Inputs from "../Inputs/Inputs";
+import React, { useCallback, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { membersListSelector } from "../../redux/selectors/membrsSelector";
+import AddMemberModal from "../modal/AddMemberModal";
 import './style.css'
 
 export const Member = function () {
@@ -17,13 +19,7 @@ export const Member = function () {
                     </div>
                     <span className="add">Add member</span>
                 </div>
-                {isModalOpen ?
-                    <div className="modal">
-                        <div className="add-member-modal">
-                            <Inputs className='input' />
-                            <Inputs className='input' />
-                        </div>
-                    </div> : null}
+                {isModalOpen ?<AddMemberModal/> : null}
             </div>
         </div>
     )

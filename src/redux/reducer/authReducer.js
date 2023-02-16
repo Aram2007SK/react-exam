@@ -1,6 +1,6 @@
 import { authType } from "../types/types";
 
-const initialState = {
+export const initialState = {
     membersList:[],
     currentUser:null,
     error:''
@@ -18,12 +18,6 @@ const authReducer = (state = initialState, action)=>{
             return {
                 ...state,
                 error:action.payload
-            }
-        }
-        case authType.SET_MEMBERS_LIST:{
-            return {
-                ...state,
-                membersList:action.payload
             }
         }
         default:return state

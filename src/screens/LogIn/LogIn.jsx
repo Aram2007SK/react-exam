@@ -39,8 +39,8 @@ export default function LogIn() {
     <div className='LogIn'>
       <h1>Log-In</h1>
       <div>
-        <Inputs className='input' value={login} error={loginError} handleChange={changeLogin} placeholder={'Please enter a log-in'} />
-        <Inputs className='input' value={password} error={PasswordError} handleChange={changePassword} placeholder={'Please enter a password'} />
+        <Inputs className='input' type={'text'} value={login} error={loginError} handleChange={changeLogin} placeholder={'Please enter a log-in'} />
+        <Inputs className='input' type={'password'} value={password} error={PasswordError} handleChange={changePassword} placeholder={'Please enter a password'} />
         <button className='sub' onClick={handleSubmit}>Submit</button>
         {error&&<div className='error'>{error}</div>}
         {/* <div onClick={toggleModal} >Open Modal</div>

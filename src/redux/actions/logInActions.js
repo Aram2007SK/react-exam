@@ -1,4 +1,4 @@
-import { authType } from "../types/types"
+import { authType, membersType } from "../types/types"
 
 export function signIn(payload) {
     return {
@@ -13,7 +13,7 @@ export function authLogin() {
     }
 }
 
-export function setCurrnetUser(payload) {
+export function setCurrentUser(payload) {
     return {
         type: authType.SET_CURRENT_USER,
         payload
@@ -29,13 +29,6 @@ export function logOut() {
 export function setError(payload){
     return{
         type:authType.SET_ERROR,
-        payload
-    }
-}
-
-export function setMembers(payload){
-    return{
-        type:authType.SET_MEMBERS_LIST,
         payload
     }
 }

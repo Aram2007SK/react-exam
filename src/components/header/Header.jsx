@@ -9,7 +9,6 @@ import { currentUserSelector } from '../../redux/selectors/authSelector';
 export default function Header() {
     const dispatch = useDispatch()
     const currentUser = useSelector(currentUserSelector)
-    console.log(currentUser.login[0]);
     const value = currentUser.login[0]
     const handleLogOut = useCallback(() => {
         dispatch(logOut())
